@@ -87,7 +87,7 @@ function canPlace(p,x,y,r=p.rotation){
 }
 function startDrag(e){
  e.preventDefault();const id=e.currentTarget.dataset.id,p=state.pieces.find(q=>q.id===id);if(!p)return;
- if(e.button===2){state.selectedId=p.id;rotateSelected();return}
+ if(e.button===2){state.selectedId=p.id;return}
  state.selectedId=p.id;updateRotateButton();
  const card=e.currentTarget;card.classList.add("selected");card.setPointerCapture?.(e.pointerId);card.classList.add("dragging");
  const sh=rotated(p.shape,p.rotation), [w,h]=dims(sh), float=document.createElement("div");float.className="floating-piece";float.append(renderShape(sh,p.color,1,p.kind,p.rotation));document.body.append(float);
