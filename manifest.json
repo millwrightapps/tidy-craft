@@ -1,0 +1,9 @@
+{
+  "name":"Tidy Craft: Inventory Tetris",
+  "short_name":"Tidy Craft",
+  "start_url":".",
+  "display":"standalone",
+  "background_color":"#f5ede0",
+  "theme_color":"#f5ede0",
+  "icons":[]
+}

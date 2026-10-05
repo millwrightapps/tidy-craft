@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#f5ede0">
+<title>Tidy Craft: Inventory Tetris</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div>
+      <div class="brand">Tidy Craft</div>
+      <div id="levelName" class="level-name">Level 1: The Sewing Box</div>
+    </div>
+    <div class="actions">
+      <button id="restartBtn" class="icon-btn" aria-label="Restart level">↻</button>
+      <button id="settingsBtn" class="icon-btn" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hud">
+      <div class="progress-wrap">
+        <div class="progress-label"><span>Progress</span><strong id="progressText">0 / 25</strong></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+    </section>
+
+    <section id="gameArea">
+      <div id="hint" class="hint">Drag the pieces into the box. Tap a piece while holding it to rotate.</div>
+      <div id="board" class="board" aria-label="Puzzle board"></div>
+      <div class="pool-label">Craft pieces</div>
+      <div id="pool" class="pool"></div>
+    </section>
+  </main>
+
+  <div id="success" class="overlay hidden">
+    <div class="modal success-card">
+      <div class="success-icon">✦</div>
+      <h2 id="successTitle">Nicely Tidy!</h2>
+      <p id="successCopy">The sewing box is perfectly organized.</p>
+      <button id="nextBtn" class="primary">Next Level <span>→</span></button>
+    </div>
+  </div>
+
+  <div id="settings" class="overlay hidden">
+    <div class="modal">
+      <div class="modal-head"><h2>Settings</h2><button id="closeSettings" class="close">×</button></div>
+      <label class="setting"><span>Sound effects</span><input id="soundToggle" type="checkbox"></label>
+      <label class="setting"><span>Background ambience</span><input id="musicToggle" type="checkbox"></label>
+      <p class="small">Your progress is saved automatically on this device.</p>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
